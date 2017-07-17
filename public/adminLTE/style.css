@@ -1,0 +1,304 @@
+.nav-tabs-custom {
+    padding: 15px 0;
+    line-height: 18px;
+}
+
+.nav-tabs-custom label.col-sm-2.control-label {
+    text-align: right;
+    font-weight: 400;
+    margin-top: 7px;
+}
+
+/*.tab-content, .form-group {*/
+    /*overflow: hidden;*/
+/*}*/
+
+.btn-save {
+    float: right;
+    margin-right: 24px;
+}
+
+label.col-sm-2.control-label span { /*color: #B10F19;*/
+    color: red;
+}
+
+.btn-add {
+    margin: 0 0 15px 0;
+}
+
+span.no-active {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #dd4b39;
+}
+
+.errors {
+    color: #cc0000;
+}
+
+span.active {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #51bb11;
+}
+
+.about_class textarea {
+    min-height: 150px;
+    padding: 15px;
+    resize: both;
+}
+
+/*******/
+
+#has_errors input {
+    border: 1px solid #cc0000;
+}
+
+#has_errors textarea {
+    border: 1px solid #cc0000;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.acidjs-css3-treeview, .acidjs-css3-treeview * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.acidjs-css3-treeview label[for]::before, .acidjs-css3-treeview label span::before {
+    content: "\25b6";
+    display: inline-block;
+    margin: 2px 0 0;
+    width: 13px;
+    height: 13px;
+    vertical-align: top;
+    text-align: center;
+    color: #e74c3c;
+    font-size: 12px;
+    line-height: 13px;
+}
+
+.acidjs-css3-treeview li ul {
+    margin: 0 0 0 22px;
+}
+
+.acidjs-css3-treeview * {
+    vertical-align: middle;
+}
+
+.acidjs-css3-treeview label {
+    font-weight: 500 !important; /*font: normal 14px/16px "Segoe UI", Arial, Sans-serif;*/
+}
+
+.acidjs-css3-treeview li {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.acidjs-css3-treeview input[type="radio"] {
+    display: none;
+}
+
+.acidjs-css3-treeview input[type="checkbox"] {
+    display: none;
+}
+
+.acidjs-css3-treeview label {
+    cursor: pointer;
+}
+
+.acidjs-css3-treeview label[for]::before {
+    -webkit-transform: translatex(-24px);
+    -moz-transform: translatex(-24px);
+    -ms-transform: translatex(-24px);
+    -o-transform: translatex(-24px);
+    transform: translatex(-24px);
+}
+
+.acidjs-css3-treeview label span::before {
+    -webkit-transform: translatex(16px);
+    -moz-transform: translatex(16px);
+    -ms-transform: translatex(16px);
+    -o-transform: translatex(16px);
+    transform: translatex(16px);
+}
+
+.acidjs-css3-treeview input[type="checkbox"][id]:checked ~ label[for]::before {
+    content: "\25bc";
+}
+
+.acidjs-css3-treeview input[type="checkbox"][id]:not(:checked) ~ ul {
+    display: none;
+}
+
+.acidjs-css3-treeview label:not([for]) {
+    margin: 0 8px 0 0;
+}
+
+.acidjs-css3-treeview label span::before {
+    content: "";
+    border: solid 1px #1375b3;
+    color: #1375b3;
+    opacity: .50;
+}
+
+.acidjs-css3-treeview label input:checked + span::before {
+    content: "\2714";
+    box-shadow: 0 0 2px rgba(0, 0, 0, .25) inset;
+    opacity: 1;
+}
+
+.chosen-container.chosen-container-multi {
+    width: 100%
+}
+
+.image {
+    float: left;
+    width: 120px;
+    height: 100px;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.image-color{
+    float: left;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+.image img {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.image .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    background-color: #DB6262;
+    text-align: center;
+    cursor: pointer;
+}
+.image-color img {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.image-color .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 22px;
+    color: #fff;
+    background-color: #DB6262;
+    text-align: center;
+    cursor: pointer;
+}
+
+.td-header {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    background-color: #DEDEDE;
+    font-size: 18px;
+}
+
+input.btn.btn-primary {
+    margin-bottom: 25px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.nav-tabs-custom {
+    box-shadow: none;
+}
+
+#category_errors > ul {
+    border: 1px solid #cc0000;
+    padding: 5px;
+}
+
+.image_product img {
+    width: 50px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+span.status-active {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #51bb11;
+}
+
+span.status-no-active {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #dd4b39;
+}
+.level3 td:first-child{
+    padding-left: 70px !important;
+}
+
+.level4 td:first-child{
+    padding-left: 90px !important;
+}
+
+.level4 td:first-child{
+     padding-left: 110px !important;
+ }
+.fa-plus:before {
+    font-size: 16px;
+}
+.layer-text{
+    display: none;
+}
+.layer{
+    position: relative;
+    z-index: 9;
+    background-color:black;
+    overflow: hidden;
+}
+.layer .delete{
+    display: none;
+}
+
+.layer .layer-text{
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    font-size: 18px;
+    color: #fff;
+    padding: 23px;
+}
+.layer img{
+    opacity: 0.5;
+}
+

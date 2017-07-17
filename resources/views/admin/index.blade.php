@@ -1,0 +1,1 @@
+@extends('admin.layouts')@section('content')    <h2><span class="text-center"><a href="{{URL::route('home')}}">{{\App\Models\Settings::first()->name_project}}</a></span></h2>@stop
