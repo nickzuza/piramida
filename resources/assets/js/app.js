@@ -39,8 +39,11 @@ require('slick-carousel');
 
 require('./plugin');
 
+require('./filial');
 
-
-
-
-
+require('./home');
+require('./product');
+require('./cart');
+require('./firstCat');
+require('./userCab');
+require('./contacts');
