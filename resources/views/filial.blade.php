@@ -24,43 +24,56 @@
                             </div>
                         </div>
                         <div class="f-header-bottom">
-                            <ul class="bottom-menu">
-                                <li ><a href="">
-                                        <div class="catalog-link">
-                                            <span>Каталог товаров</span>
-                                            <div class="icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.344 185.344" xml:space="preserve" width="12px" height="9px"><g><g><path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18    c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0    c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path></g></g>
+                            <div class="mob-menu-butt"></div>
+                            <div class="bottom-menu">
+                                <div class="bottom-menu_header">
+                                    <div class="mob-men-close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 47.971 47.971" xml:space="preserve" width="13px" height="13px">
+                                <g>
+                                    <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88   c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242   C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879   s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+                                </g>
+                           </svg>
+                                    </div>
+                                </div>
+                                <ul class="">
+                                    <li ><a href="">
+                                            <div class="catalog-link">
+                                                <span>Каталог товаров</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.344 185.344" xml:space="preserve" width="12px" height="9px"><g><g><path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18    c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0    c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path></g></g>
                                                 </svg>
+                                                </div>
                                             </div>
-                                        </div>
-                                       <span>Baza Angro Chișinau</span>
-                                    </a></li>
-                                <li :class="{activeTab : filialTab === 2 }" ><a  href="">
-                                        <div class="catalog-link">
-                                            <span>Каталог товаров</span>
-                                            <div class="icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.344 185.344" xml:space="preserve" width="12px" height="9px"><g><g><path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18    c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0    c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path></g></g>
+                                            <span>Baza Angro Chișinau</span>
+                                        </a></li>
+                                    <li :class="{activeTab : filialTab === 2 }" ><a  href="">
+                                            <div class="catalog-link">
+                                                <span>Каталог товаров</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.344 185.344" xml:space="preserve" width="12px" height="9px"><g><g><path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18    c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0    c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path></g></g>
                                                 </svg>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <span>Filiala Cimișlia</span></a></li>
-                                <li :class="{activeTab : filialTab === 3 }" ><a  href=""><div class="catalog-link">
-                                            <span>Каталог товаров</span>
-                                            <div class="icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.344 185.344" xml:space="preserve" width="12px" height="9px"><g><g><path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18    c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0    c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path></g></g>
+                                            <span>Filiala Cimișlia</span></a></li>
+                                    <li :class="{activeTab : filialTab === 3 }" ><a  href=""><div class="catalog-link">
+                                                <span>Каталог товаров</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.344 185.344" xml:space="preserve" width="12px" height="9px"><g><g><path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18    c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0    c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path></g></g>
                                                 </svg>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <span>Filiala Falești</span></a></li>
-                                <li :class="{activeTab : filialTab === 4 }" ><a  href="">
-                                        <div class="catalog-link">
-                                            <span>Каталог товаров</span>
-                                            <div class="icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.344 185.344" xml:space="preserve" width="12px" height="9px"><g><g><path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18    c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0    c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path></g></g>
+                                            <span>Filiala Falești</span></a></li>
+                                    <li :class="{activeTab : filialTab === 4 }" ><a  href="">
+                                            <div class="catalog-link">
+                                                <span>Каталог товаров</span>
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 185.344 185.344" xml:space="preserve" width="12px" height="9px"><g><g><path d="M92.672,144.373c-2.752,0-5.493-1.044-7.593-3.138L3.145,59.301c-4.194-4.199-4.194-10.992,0-15.18    c4.194-4.199,10.987-4.199,15.18,0l74.347,74.341l74.347-74.341c4.194-4.199,10.987-4.199,15.18,0    c4.194,4.194,4.194,10.981,0,15.18l-81.939,81.934C98.166,143.329,95.419,144.373,92.672,144.373z"></path></g></g>
                                                 </svg>
-                                            </div>
-                                        </div><span>Filiala Mihailovca</span></a></li>
-                            </ul>
+                                                </div>
+                                            </div><span>Filiala Mihailovca</span></a></li>
+                                </ul>
+                            </div>
+
                             <div class="f-header-bottom_language">
                                 <ul>
                                     <li :class="{active : lang === 1} " v-on:click="lang = 1"><a >ro</a></li>
@@ -82,7 +95,7 @@
                         <div class="catalog-wrapper">
                             <div class="block-title">каталог товаров <b>- Филиал чимишлия</b></div>
                             <ul class="catalog-list">
-                                <li id="cat-1" :class="{active : sCatItem == 1}" data-img='["https://i.simpalsmedia.com/marketplace/products/original/d9424639aa3eef7e2492ef75e51052dd.jpg" ,"https://i.simpalsmedia.com/marketplace/products/original/fc6cdc1abfc4c84838a15ae267c0d9e3.jpg","https://i.simpalsmedia.com/marketplace/products/original/d1e7bdf0a4012455b113ddac8a107c44.jpg"]' v-on:click="sCatItem =1"><span>Camine</span></li>
+                                <li id="cat-1" :class="{active : sCatItem == 1}" data-img='["https://i.simpalsmedia.com/marketplace/products/original/d9424639aa3eef7e2492ef75e51052dd.jpg","https://i.simpalsmedia.com/marketplace/products/original/d9424639aa3eef7e2492ef75e51052dd.jpg" ,"https://i.simpalsmedia.com/marketplace/products/original/fc6cdc1abfc4c84838a15ae267c0d9e3.jpg","https://i.simpalsmedia.com/marketplace/products/original/d1e7bdf0a4012455b113ddac8a107c44.jpg"]' v-on:click="sCatItem =1"><span>Camine</span></li>
                                 <li id="cat-2" :class="{active : sCatItem == 2}" data-img='[
                                 "https://i.simpalsmedia.com/marketplace/products/original/d9424639aa3eef7e2492ef75e51052dd.jpg" ,
                                 "https://i.simpalsmedia.com/marketplace/products/original/fc6cdc1abfc4c84838a15ae267c0d9e3.jpg"]' v-on:click="sCatItem =2"><span>Mobila pentru ograd</span></li>
@@ -171,7 +184,7 @@
                     </div>
 
 
-                <div class="f-footer">
+                <div class="f-footer" >
                     <div class="copyright">© 2017 Piramida.md. Все права защищены.</div>
                     <div class="socials">
                         <a href="" class="social" style="background-size: 12px;background-image: url(../../img/fb.png)"></a>

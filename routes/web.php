@@ -31,6 +31,19 @@ Route::get('/userCab',['as' => '/', 'uses' => function (){
 Route::get('/contacts',['as' => '/', 'uses' => function (){
     return view('contacts');
 }]);
+Route::get('/news',['as' => '/', 'uses' => function (){
+    return view('news');
+}]);
+Route::get('/oneNew',['as' => '/', 'uses' => function (){
+    return view('oneNew');
+}]);
+Route::get('/aboutUs',['as' => '/', 'uses' => function (){
+    return view('aboutUs');
+}]);
+Route::get('/search',['as' => '/', 'uses' => function (){
+    return view('search');
+}]);
+
 Route::get('/catalog',['as' => 'catalog', 'uses' => function (){
     return view('catalog');
 }]);

@@ -1,7 +1,7 @@
 <template>
     <div class="product-slider">
         <div class="slide-img" v-for="(item , index) in imgs" :key="index">
-            <a :href="item" :data-lightbox="item" class="img" :style="{backgroundImage:'url('+item+')'}"></a>
+            <a :href="item" :data-lightbox="index"  rel='lightbox' class="img" :style="{backgroundImage:'url('+item+')'}"></a>
         </div>
 
     </div>

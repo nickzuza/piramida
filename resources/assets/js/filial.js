@@ -55,7 +55,16 @@ if(document.getElementById('filialPage')){
 
     });
 
-
+    $('.bottom-menu>li>a').click(function(e){
+        if(window.innerHeight < 1270){
+            e.preventDefault();
+        }
+    });
+    $('.mob-menu-butt').click(function(){
+        $('.bottom-menu').velocity({
+            top:0
+        });
+    });
     $(window).on('resize' , function(){
         $('.product-slider-wrapper-arrow').velocity({
             left:$('.catalog-list li.active').position().left+'px'
