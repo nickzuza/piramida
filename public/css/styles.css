@@ -3333,6 +3333,13 @@ ul {
   -webkit-box-pack: justify;
   justify-content: space-between;
 }
+.filialPage .f-header-bottom ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+}
 .filialPage .f-header-bottom .mob-menu-butt {
   display: none;
 }
@@ -3460,44 +3467,9 @@ ul {
     padding: 0 15px ;
   }
 }
-.filialPage .f-header-bottom .bottom-menu li a .catalog-link {
-  display: none;
-}
-.filialPage .f-header-bottom .bottom-menu li a .catalog-link span {
-  font-size: 15px;
-}
-.filialPage .f-header-bottom .bottom-menu li a .catalog-link .icon {
-  margin-left: 20px;
-  width: 21px;
-  height: 21px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background: #ffe500;
-  border-radius: 3px;
-}
-.filialPage .f-header-bottom .bottom-menu li a .catalog-link .icon svg {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
 @media (min-width: 1270px) and (max-width: 99998px) {
   .filialPage .f-header-bottom .bottom-menu li a:hover {
-    background: #5f6b79;
-  }
-  .filialPage .f-header-bottom .bottom-menu li a:hover .catalog-link {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    -webkit-box-align: center;
-    align-items: center;
-  }
-  .filialPage .f-header-bottom .bottom-menu li a:hover > span {
-    display: none;
+    background: #213c80;
   }
 }
 .filialPage .f-header-bottom_language {
@@ -4472,12 +4444,18 @@ ul {
   position: relative;
 }
 .productPage-top_slider .slider-max .slick-arrow {
+  opacity: 0;
   position: absolute;
   top: 0;
   height: 26px;
   bottom: 0;
   margin: auto 0;
   z-index: 111;
+}
+@media (min-width: 2px) and (max-width: 1269px) {
+  .productPage-top_slider .slider-max .slick-arrow {
+    opacity: 1;
+  }
 }
 .productPage-top_slider .slider-max .slick-arrow svg {
   fill: #999999;
@@ -4689,6 +4667,12 @@ ul {
   justify-content: center;
   margin-bottom: 17px;
   background-color: transparent ;
+}
+.productPage-top_cart .addToFav.toFav span {
+  color: #04226d;
+}
+.productPage-top_cart .addToFav.toFav span:before {
+  background-image: url(../../img/heart2.png);
 }
 .productPage-top_cart .addToFav:active span {
   color: #04226d;
@@ -5981,6 +5965,43 @@ ul {
   .userCab-left {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 10px;
+    position: relative;
+  }
+}
+.userCab-left .header-men {
+  display: none;
+}
+@media (min-width: 2px) and (max-width: 1169px) {
+  .userCab-left .header-men {
+    width: 100%;
+    height: 57px;
+    background-color: #213c80;
+    padding: 0 15px;
+    position: relative;
+    color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  .userCab-left .header-men:after {
+    margin-top: 3px;
+    transition: 0.3s;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #ffe500 transparent;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
   }
 }
 .userCab-left .menu-list {
@@ -5989,6 +6010,17 @@ ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
+}
+@media (min-width: 2px) and (max-width: 1169px) {
+  .userCab-left .menu-list {
+    display: block;
+    position: absolute;
+    top: 57px;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1111;
+  }
 }
 .userCab-left .menu-list li {
   cursor: pointer;
@@ -6011,6 +6043,11 @@ ul {
 .userCab-left .menu-list li.active {
   color: #fff;
   background-color: #213c80;
+}
+@media (min-width: 2px) and (max-width: 1169px) {
+  .userCab-left .menu-list li.active {
+    display: none;
+  }
 }
 .userCab-left .menu-list li.active:before {
   content: '';

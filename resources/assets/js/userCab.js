@@ -25,6 +25,7 @@ if(document.getElementById('userCabPage')){
             tab:1,
             hProds:window.historyItems,
             city:window.cities,
+            activeMen:'',
             form:{
                 changePass:{
                     actPass:'',
@@ -76,9 +77,7 @@ if(document.getElementById('userCabPage')){
                             //     }
                             // });
                         }
-                    }).catch(() => {
-
-                    });
+                    }).catch(() => {});
             },
             validateForm(){
                 this.$validator.validateAll().then((result) => {
@@ -99,13 +98,10 @@ if(document.getElementById('userCabPage')){
                         //     }
                         // });
                     }
-                }).catch(() => {
-
-                });
+                }).catch(() => {});
             },
             getTotal(item){
                var total=0;
-
                 for(var i=0 ;i <item.items.length;i++){
                     total +=(item.items[i].price * item.items[i].quantity);
                 }
@@ -117,6 +113,36 @@ if(document.getElementById('userCabPage')){
             getRest(price){
                 return Math.floor((price - this.getRound(price))*100);
             },
+        },
+        mounted(){
+            this.activeMen = $('.menu-list>.active').html()
+        }
+    });
+    $('.header-men').click(function(){
+        if($('.menu-list').hasClass('opened')){
+            $('.menu-list').velocity({
+                height:0
+            });
+            $('.menu-list').removeClass('opened');
+        }else{
+            $('.menu-list').velocity({
+                height:'228px'});
+            $('.menu-list').addClass('opened');
+        }
+    });
+    $(window).on('resize' , function(){
+        if(window.innerWidth > 1170){
+            $('.menu-list').removeAttr('style');
+            $('.menu-list').removeClass('opened');
+        }
+    });
+    $('.menu-list>li').click(function(){
+        userCab.activeMen = $('.menu-list>.active').html()
+        if(window.innerWidth < 1170) {
+            $('.menu-list').velocity({
+                height: 0
+            });
+            $('.menu-list').removeClass('opened');
         }
     });
 }

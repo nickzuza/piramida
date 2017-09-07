@@ -94,7 +94,7 @@
                         <div class="cart-quantity">
                             <span class="cart-label">Кол-во</span>
                             <div class="item-quantity">
-                                <button v-on:click="product.cartQuant--">
+                                <button v-on:click="(product.cartQuant > 0) ? product.cartQuant-- :null">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 491.858 491.858" width="12px" height="12px" xml:space="preserve">
                                             <g><g><path d="M465.167,211.613H240.21H26.69c-8.424,0-26.69,11.439-26.69,34.316s18.267,34.316,26.69,34.316h213.52h224.959    c8.421,0,26.689-11.439,26.689-34.316S473.59,211.613,465.167,211.613z"/></g></g>
                                     </svg>
@@ -157,7 +157,7 @@
 
                         </modal>
 
-                        <button class="addToFav"><span>Добавить в избранные</span></button>
+                        <button class="addToFav" :class="{'toFav' : product.onFav === true}" @click="addFav"><span>Добавить в избранные</span></button>
                     </div>
                 </div>
                 <div class="productPage-bottom">
@@ -168,14 +168,7 @@
                             <div><span>Вес, кг:</span><span>12</span></div>
                             <div><span> Страна-производитель:</span><span>Россия</span></div>
                             <div><span>Назначение:</span><span>подготовка поверхности (грунтование)</span></div>
-                            <div><span>Марка:</span><span>Боларс</span></div>
-                            <div><span>Материал основания:</span><span>бетонные, кирпичные, каменные и оштукатуренные поверхности, ГВЛ, ГКЛ, ПГП</span></div>
-                            <div><span>Область применения:</span><span>для внутренних и наружных работ, для увеличения адгезии наносимых материалов путем придания основаниям шероховатости</span></div>
-                            <div><span>Артикул:</span><span>15848303</span></div>
-                            <div><span>Вес, кг:</span><span>12</span></div>
-                            <div><span> Страна-производитель:</span><span>Россия</span></div>
-                            <div><span>Назначение:</span><span>подготовка поверхности (грунтование)</span></div>
-                            <div><span>Марка:</span><span>Боларс</span></div>
+
                         </div>
                         <div class="more-info" data-opened="Все характеристики" data-closed="Скрыть характеристики">Все характеристики </div>
 

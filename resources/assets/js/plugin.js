@@ -108,7 +108,6 @@ if(document.getElementById('header')){
     });
     $(document).on('click','.category-back',function(e){
         var el=e.currentTarget;
-        console.log(1);
         $(el).closest('.subcategories-list').velocity({
             left:'100vw'
         });
@@ -153,7 +152,6 @@ if(document.getElementById('header')){
             $('html').removeAttr('class');
         }
         if(window.innerWidth < 1270){
-            console.log(1);
             setTimeout(function(){
                 $(window).scrollTop(0);
             },50)
@@ -195,7 +193,6 @@ if(document.getElementById('header')){
     $(document).on('mouseenter' , '.categories-list>li' , function(e){
 
         if(window.innerWidth >1270){
-            console.log(1);
             var el=e.currentTarget;
             if($('.categories-list').innerHeight() < $(el).find('.subcategories-list').innerHeight()){
                 $('.categories-list').css('height' , $(el).find('.subcategories-list').innerHeight() + 'px');

@@ -112,7 +112,7 @@
             <div class="container">
                 <div class="userCab-wrapper">
                     <div class="userCab-left">
-
+                            <div class="header-men" v-text="activeMen"></div>
                             <ul class="menu-list" >
                                 <li  :class="{active : tab===1}" @click="tab=1">Личные данные</li>
                                 <li :class="{active : tab===2}" @click="tab=2">Избранные товары</li>
