@@ -3057,6 +3057,12 @@ ul {
     display: none;
   }
 }
+.modal-body .input-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 100%;
+}
 .modal-body .header-log_title {
   margin-bottom: 48px;
 }
