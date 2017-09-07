@@ -32,6 +32,10 @@
                 </div>
                 <div class="h1-title"><h1>Грунт Ceresit CT17 5 л</h1></div>
                 <div class="productPage-top">
+                    <div class="info-id">
+                        Артикул:
+                        <span v-text="product.id"></span>
+                    </div>
                     <div class="productPage-top_slider">
                         <div class="slider-min" >
                             <div class="slide" v-for="(item , index) in product.images" key="'min'+index" :style="{backgroundImage : 'url('+item+')'}"></div>
@@ -52,10 +56,6 @@
                         </div>
                     </div>
                     <div class="productPage-top_info">
-                        <div class="info-id">
-                            Артикул:
-                            <span v-text="product.id"></span>
-                        </div>
                         <div class="main-info">
                             <div class="information-wrapper">
                                 <div class="information-title">Вес:</div>

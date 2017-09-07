@@ -435,36 +435,47 @@
                                     <div class="hItem" v-for="item in hProds" :class="[item.status , {big : item.items.length > 1} , {closed : item.items.length > 1} ]">
                                          <div class="hItem-info">
                                              <div class="icon-wrapper">
+                                                 <span class="title-label">Статус</span>
                                                 <div class="icon"></div>
                                              </div>
                                              <div class="date">
+                                                 <span class="title-label">Дата</span>
                                                  <span class="data" v-text="item.time.date"></span>
                                                  <span class="hour" v-text="item.time.hour"></span>
                                              </div>
-                                             <div class="id" v-text="item.id"></div>
                                          </div>
                                         <div class="hItem-prod">
-                                            <ul class="hItem-list">
-                                                <li v-for="product in item.items">
-                                                 <div class="item-desc">
-                                                    <div class="img" :style="{backgroundImage: 'url('+product.img+')'}"></div>
-                                                    <div class="item-info">
-                                                        <a href="#" class="title" v-text="product.title"></a>
-                                                        <div class="count">
-                                                            <span v-text="product.quantity"></span>
-                                                            <span>x</span>
-                                                            <span v-text="getRound(product.price)"></span>
-                                                            <sup v-text="getRest(product.price)"></sup>
-                                                            <span>лей</span>
+
+                                            <div class="id" >
+                                                <span class="title-label">Номер заказа</span>
+                                                <label v-text="item.id"></label>
+                                            </div>
+                                            <div class="hItem-list">
+                                                <span class="content title-label">Содержимое</span>
+                                                <ul >
+                                                    <li v-for="product in item.items">
+                                                        <div class="item-desc">
+                                                            <div class="img" :style="{backgroundImage: 'url('+product.img+')'}"></div>
+                                                            <div class="item-info">
+                                                                <a href="#" class="title" v-text="product.title"></a>
+                                                                <div class="count">
+                                                                    <span v-text="product.quantity"></span>
+                                                                    <span>x</span>
+                                                                    <span v-text="getRound(product.price)"></span>
+                                                                    <sup v-text="getRest(product.price)"></sup>
+                                                                    <span>лей</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                 </div>
-                                                </li>
-                                            </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
                                             <div class="sum">
-                                            <span class="integer" v-text="getRound(getTotal(item))"></span>
-                                            <sup class="rest" v-text="getRest(getTotal(item))">50</sup>
-                                            <span class="sufix">лей</span>
+                                                <span class="title-label">Сумма</span>
+                                                <span class="integer" v-text="getRound(getTotal(item))"></span>
+                                                <sup class="rest" v-text="getRest(getTotal(item))">50</sup>
+                                                <span class="sufix">лей</span>
                                             </div>
                                         </div>
                                         <div class="more-info" data-open="Посмотреть все" data-close="Скрыть">Посмотреть все</div>

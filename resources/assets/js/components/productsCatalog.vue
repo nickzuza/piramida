@@ -46,7 +46,13 @@
             nextArrow:'<div class="slick-arrow nextArrow">'+
             '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42px" height="52px">'+
             '<path fill-rule="evenodd" d="M25.094,52.000 L25.094,51.925 C11.149,51.392 -0.000,40.056 -0.000,26.109 C-0.000,12.163 11.149,0.826 25.094,0.294 L25.094,-0.000 L42.000,-0.000 L42.000,52.000 L25.094,52.000 ZM22.609,16.456 C22.016,15.851 21.049,15.848 20.451,16.448 C19.854,17.048 19.850,18.025 20.444,18.630 L26.700,25.000 L20.444,31.370 C19.850,31.974 19.854,32.951 20.451,33.552 C20.749,33.851 21.138,34.000 21.527,34.000 C21.919,34.000 22.311,33.848 22.609,33.544 L31.001,25.000 L22.609,16.456 Z"/>'+
-            '</svg></div>'
+            '</svg></div>',
+            responsive:[
+                {breakpoint:1270 , settings:{slidesToShow:4}},
+                {breakpoint:1000 , settings:{slidesToShow:3}},
+                {breakpoint:650 , settings:{slidesToShow:2}},
+                {breakpoint:450 , settings:{slidesToShow:1}}
+            ]
         });
     }
 </script>

@@ -62,7 +62,7 @@
 
         <div class="page-content">
             <div class="container">
-                <div class="breadcrumbs">
+                <div class="breadcrumbs" :class="{hide: step >1}">
                     <div class="breadcrumb"><a href="">Главная</a></div>
                     <div class="breadcrumb"><span>Корзина</span></div>
                 </div>

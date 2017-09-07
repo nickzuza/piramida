@@ -48,6 +48,11 @@ if(document.getElementById('filialPage')){
 
     $('.catalog-list li').on('click',function(e){
         var el =e.currentTarget;
+        if(window.innerWidth <1270){
+
+            var slider = $('.product-slider-wrapper').offset().top;
+            $('html , body').animate({scrollTop: slider+'px'} , 500);
+        }
         var left = $(el).position().left;
         $('.product-slider-wrapper-arrow').velocity({
             left:$('.catalog-list li.active').position().left+'px'
@@ -63,6 +68,11 @@ if(document.getElementById('filialPage')){
     $('.mob-menu-butt').click(function(){
         $('.bottom-menu').velocity({
             top:0
+        });
+    });
+    $('.mob-men-close').click(function(){
+        $('.bottom-menu').velocity({
+            top:'-100vh'
         });
     });
     $(window).on('resize' , function(){

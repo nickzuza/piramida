@@ -107,7 +107,6 @@ if(document.getElementById('userCabPage')){
                var total=0;
 
                 for(var i=0 ;i <item.items.length;i++){
-                    console.log(item.items[i]);
                     total +=(item.items[i].price * item.items[i].quantity);
                 }
                 return total;
