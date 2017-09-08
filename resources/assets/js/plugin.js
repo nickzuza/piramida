@@ -36,6 +36,7 @@ if(document.getElementById('header')){
         el:"#header",
         data:{
             loader:false,
+            lang:1,
             cartProducts:2,
             favProducts:0,
             categMenu:false,
