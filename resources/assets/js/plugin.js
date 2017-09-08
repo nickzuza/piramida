@@ -35,7 +35,7 @@ if(document.getElementById('header')){
     window.headerVue = new Vue({
         el:"#header",
         data:{
-            lang:1,
+            loader:false,
             cartProducts:2,
             favProducts:0,
             categMenu:false,

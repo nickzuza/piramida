@@ -14,8 +14,12 @@
     @yield('meta')
 </head>
 <body>
+
 <div class="content">
     <header id="header" class="header">
+        <transition name="fade">
+            <div class="preloader" v-if="loader" v-cloak></div>
+        </transition>
         <div class="header-wrapper">
             <div class="header-top">
                 <div class="header-language">

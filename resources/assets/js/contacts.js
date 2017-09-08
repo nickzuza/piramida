@@ -5,6 +5,7 @@ if(document.getElementById('contacts')){
          el:"#contacts",
         data: {
             items: window.locations,
+
             form: {
                 feedback: {
                     uName: '',

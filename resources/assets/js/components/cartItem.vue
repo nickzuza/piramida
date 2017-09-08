@@ -62,8 +62,11 @@
                 this.$emit('get-total');
             },
             minus(){
-                this.item.num--;
-                this.$emit('get-total');
+                if(this.item.num > 1){
+                    this.item.num--;
+                    this.$emit('get-total');
+                }
+
             },
             destroy(){
                 this.$emit('close',this.arrPos);

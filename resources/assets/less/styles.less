@@ -764,6 +764,16 @@ ul {
 .hide{
   .screen(2px , @s750 , {display:none});
 }
+.preloader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background-color: rgba(255,255,255,0.5);
+  background-image: url(../img/loading.gif);
+  background-position: center center;
+  background-repeat:no-repeat;
+}
 
 .header{
   width: 100%;
@@ -1463,6 +1473,7 @@ ul {
 
         });
       }
+
       .screen(2px , @s1300 , {
         width: 100vw;
         position: fixed;
