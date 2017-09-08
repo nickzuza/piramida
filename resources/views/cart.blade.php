@@ -66,7 +66,7 @@
                     <div class="breadcrumb"><a href="">Главная</a></div>
                     <div class="breadcrumb"><span>Корзина</span></div>
                 </div>
-                <div class="cart-wrapper">
+                <div class="cart-wrapper" v-if="step <3">
                     <div class="cart-left" >
                         <transition name="fade">
                             <section class="left-container" v-cloak v-if="step === 1">
@@ -572,8 +572,25 @@
 
                         </div>
                     </transition>
-
                 </div>
+                <transition name="fade">
+                    <div class="cart-wrapper" v-if="step ===3" v-cloak>
+
+                        <div class="approved">
+                            <div class="checked">
+                                <div class="check"></div>
+                            </div>
+                            <div class="approved-title">Ваш заказ оформлен</div>
+                            <p>Благодарим Вас  за оформление заказа!<br>
+                                Номер Вашего заказа: <b>6586</b></p>
+                            <p>Скоро с Вами свяжется отдел доставки для подтверждения заказа.<br>
+                                Полная информация о состоянии Вашего заказа отправлена на Ваш электронный адрес.</p>
+                            <butt class="main-butt">Продолжить покупки</butt>
+                        </div>
+
+                    </div>
+                </transition>
+
 
 
             </div>

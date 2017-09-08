@@ -74,6 +74,7 @@ if(document.getElementById('cartPage')){
                         //         this.step = 3;
                         //     }
                         // });
+                        this.step=3;
                     }
                 }).catch(() => {
 

@@ -5258,6 +5258,60 @@ ul {
     flex-direction: column;
   }
 }
+.cart-wrapper .approved {
+  display: -webkit-box;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  color: #333;
+}
+.cart-wrapper .approved .main-butt {
+  margin-bottom: 250px;
+}
+.cart-wrapper .approved-title {
+  font-size: 37px;
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+.cart-wrapper .approved p {
+  margin-bottom: 30px;
+}
+.cart-wrapper .approved .checked {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/check-fone.png);
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  border: 4px solid #1fbe00;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.cart-wrapper .approved .checked .check {
+  width: 61px;
+  height: 45px;
+  background-image: url(../img/checked.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .cart-left {
   width: 75%;
 }
