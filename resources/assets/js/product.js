@@ -21,6 +21,7 @@ function prodSlideInit(){
     $('.slider-max').slick({
         asNavFor:'.slider-min',
         dots:false,
+        dots:false,
         arrows:true,
         prevArrow:'<div class="slick-arrow prevArrow">' +
         '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 492.004 492.004" height="40" width="25 " xml:space="preserve">'+
@@ -145,10 +146,10 @@ if(document.getElementById('productPage')){
         },
         methods:{
             addFav(){
-                if (this.product.onFav === true){
-                    this.product.onFav = false;
+                if (parseInt(this.product.onFav) === 0){
+                    this.product.onFav = 1;
                 }else{
-                    this.product.onFav = true;
+                    this.product.onFav = 0;
                 }
             },
             removeError(name){

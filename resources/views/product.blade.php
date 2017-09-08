@@ -157,7 +157,7 @@
 
                         </modal>
 
-                        <button class="addToFav" :class="{'toFav' : product.onFav === true}" @click="addFav"><span>Добавить в избранные</span></button>
+                        <button class="addToFav" :class="{'toFav' : parseInt(product.onFav) != 0}" @click="addFav"><span>Добавить в избранные</span></button>
                     </div>
                 </div>
                 <div class="productPage-bottom">
