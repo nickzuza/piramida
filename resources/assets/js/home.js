@@ -1,4 +1,5 @@
 function homeSliderInit(){
+
     $('.home-slider').slick({
         slidesToShow:1,
         arrows:false,
@@ -6,7 +7,7 @@ function homeSliderInit(){
     });
 }
 function initProductSlider(id){
-
+    $(id+' .products-slider').not('.slick-initialized').css('opacity','0');
     $(id+' .products-slider').not('.slick-initialized').slick({
         slidesToShow:5,
         slidesToScroll:1,
@@ -51,7 +52,7 @@ function initProductSlider(id){
 
 
     });
-
+    $(id+' .products-slider').css('opacity','1');
 }
 if(document.getElementById('homePage')){
 
@@ -73,7 +74,6 @@ if(document.getElementById('homePage')){
         watch:{
             activeTab(){
                     if(this.activeTab === 1){
-
                         setTimeout(()=>{
                             if($('#new-prods .products-slider').length){
                                 if($('#new-prods .products-slider').hasClass('slick-initialized')){
@@ -103,5 +103,4 @@ if(document.getElementById('homePage')){
             }
         }
     });
-
 }

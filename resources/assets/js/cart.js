@@ -75,6 +75,10 @@ if(document.getElementById('cartPage')){
                         //     }
                         // });
                         this.step=3;
+                    }else{
+                        var x = this.errors.items[0].field;
+                        var h = $('input[name=' + x + ']').offset().top;
+                        $('html ,body').animate({scrollTop:h} , 'slow');
                     }
                 }).catch(() => {
 

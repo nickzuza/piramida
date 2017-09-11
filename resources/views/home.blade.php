@@ -192,342 +192,340 @@
                         <button class="tab-butt" :class="{activeTab : activeTab === 1 }" @click="activeTab = 1">НОВИНКИ</button>
                         <button class="tab-butt" :class="{activeTab : activeTab === 2 }" @click="activeTab = 2">Акционные</button>
                     </div>
-                    <transition name="fade">
-                        <div v-if="activeTab === 1" class="container-products" id="new-prods"><div class="products-slider" v-cloak>
-                                <div class="product">
+                    <div v-if="activeTab === 1" class="container-products" id="new-prods" >
+                        <div class="products-slider" v-cloak>
+                            <div class="product">
 
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
-                                    </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker sale">Скидка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker sale">Скидка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker exclusive">Хит продаж</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker exclusive">Хит продаж</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-
-
-                            </div></div>
-                    </transition>
-                    <transition name="fade">
-                        <div v-if="activeTab === 2" class="container-products" id="auction-prods"><div class="products-slider" v-cloak>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div v-if="activeTab === 2" class="container-products" id="auction-prods">
+                        <div class="products-slider" v-cloak>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker sale">Скидка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker sale">Скидка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker exclusive">Хит продаж</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker exclusive">Хит продаж</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
-                                <div class="product">
-
-                                    <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
-                                        <div class="stickers">
-                                            <span class="sticker new">Новинка</span>
-                                        </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
                                     </div>
-                                    <a href="" class="product-title">
-                                        Профиль UD  (Standard) 3m/4m
-                                    </a>
-                                    <div class="product-bottom">
-                                        <div class="prices">
-                                            <div class="old-price"><span>1788</span> <b>лей</b> </div>
-                                            <div class="new-price"><span>1788</span> <b>лей</b></div>
-                                        </div>
-                                        <button class="to-cart"></button>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
+                            <div class="product">
+
+                                <div class="img" style="background-image: url(https://i.simpalsmedia.com/marketplace/products/original/61bf3f7f51658a18d42fd16e9dbf456e.jpg)">
+                                    <div class="stickers">
+                                        <span class="sticker new">Новинка</span>
                                     </div>
                                 </div>
+                                <a href="" class="product-title">
+                                    Профиль UD  (Standard) 3m/4m
+                                </a>
+                                <div class="product-bottom">
+                                    <div class="prices">
+                                        <div class="old-price"><span>1788</span> <b>лей</b> </div>
+                                        <div class="new-price"><span>1788</span> <b>лей</b></div>
+                                    </div>
+                                    <button class="to-cart"></button>
+                                </div>
+                            </div>
 
-
-                            </div></div>
-                    </transition>
+                        </div>
+                    </div>
                 </div>
             </div>
         <div class="container">
@@ -569,7 +567,7 @@
 
             <div class="container">
                 <div id="partener-slider"  class="container-products">
-                <div class="products-slider">
+                <div class="products-slider" v-cloak>
                     <div class="partener-img" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/92/Unic_logo.jpg)"></div>
                     <div class="partener-img" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/92/Unic_logo.jpg)"></div>
                     <div class="partener-img" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/92/Unic_logo.jpg)"></div>

@@ -58,33 +58,40 @@
                 </div>
                 <div class="header-user-prods">
                     <button>
-                        <div class="icon">
-                            <span class="ellipsis" v-if="favProducts >0" v-text="favProducts" v-cloak></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="19" height="19" x="0px" y="0px" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
-                                <path d="M326.632,10.346c-38.733,0-74.991,17.537-99.132,46.92c-24.141-29.383-60.399-46.92-99.132-46.92  C57.586,10.346,0,67.931,0,138.714c0,55.426,33.049,119.535,98.23,190.546c50.162,54.649,104.729,96.96,120.257,108.626l9.01,6.769  l9.009-6.768c15.53-11.667,70.099-53.979,120.26-108.625C421.95,258.251,455,194.141,455,138.714  C455,67.931,397.414,10.346,326.632,10.346z"/>
-                            </svg>
-                        </div>
-                        <span>Избранные</span></button>
+                        <a :href='favProducts >0 ? "#" : ""'>
+                            <div class="icon">
+                                <span class="ellipsis" v-if="favProducts >0" v-text="favProducts" v-cloak></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="19" height="19" x="0px" y="0px" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+                                    <path d="M326.632,10.346c-38.733,0-74.991,17.537-99.132,46.92c-24.141-29.383-60.399-46.92-99.132-46.92  C57.586,10.346,0,67.931,0,138.714c0,55.426,33.049,119.535,98.23,190.546c50.162,54.649,104.729,96.96,120.257,108.626l9.01,6.769  l9.009-6.768c15.53-11.667,70.099-53.979,120.26-108.625C421.95,258.251,455,194.141,455,138.714  C455,67.931,397.414,10.346,326.632,10.346z"/>
+                                </svg>
+                            </div>
+                            <span>Избранные</span>
+                        </a>
+                    </button>
                     <button>
-                        <div class="icon">
-                            <span class="ellipsis" v-if="cartProducts >0" v-text="cartProducts" v-cloak></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20px" height="22px" x="0px" y="0px" width="30.861px" height="30.861px" viewBox="0 0 30.861 30.861" style="enable-background:new 0 0 30.861 30.861;" xml:space="preserve">
-                                <g>
+                        <a :href='cartProducts >0 ? "#" : ""'>
+                            <div class="icon">
+                                <span class="ellipsis" v-if="cartProducts >0" v-text="cartProducts" v-cloak></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20px" height="22px" x="0px" y="0px" width="30.861px" height="30.861px" viewBox="0 0 30.861 30.861" style="enable-background:new 0 0 30.861 30.861;" xml:space="preserve">
                                     <g>
                                         <g>
-                                            <circle cx="11.212" cy="26.398" r="2.673"/>
-                                        </g>
-                                        <g>
-                                            <circle cx="23.823" cy="26.398" r="2.673"/>
-                                        </g>
-                                        <g>
-                                            <path d="M8.748,8.439c-0.325,0-0.621-0.186-0.763-0.478L5.353,2.53C5.134,2.077,4.675,1.79,4.172,1.79H0.676     C0.303,1.79,0,2.092,0,2.465v0.853c0,0.373,0.303,0.675,0.676,0.675h2.502c0.173,0,0.324,0.117,0.369,0.284L7.741,20.2     c0.401,1.525,1.781,2.589,3.358,2.589h13.042c1.521,0,2.863-0.989,3.315-2.44l3.367-10.811C30.902,9.281,30.855,9,30.697,8.784     c-0.16-0.217-0.413-0.345-0.684-0.345H8.748z"/>
+                                            <g>
+                                                <circle cx="11.212" cy="26.398" r="2.673"/>
+                                            </g>
+                                            <g>
+                                                <circle cx="23.823" cy="26.398" r="2.673"/>
+                                            </g>
+                                            <g>
+                                                <path d="M8.748,8.439c-0.325,0-0.621-0.186-0.763-0.478L5.353,2.53C5.134,2.077,4.675,1.79,4.172,1.79H0.676     C0.303,1.79,0,2.092,0,2.465v0.853c0,0.373,0.303,0.675,0.676,0.675h2.502c0.173,0,0.324,0.117,0.369,0.284L7.741,20.2     c0.401,1.525,1.781,2.589,3.358,2.589h13.042c1.521,0,2.863-0.989,3.315-2.44l3.367-10.811C30.902,9.281,30.855,9,30.697,8.784     c-0.16-0.217-0.413-0.345-0.684-0.345H8.748z"/>
+                                            </g>
                                         </g>
                                     </g>
-                                </g>
-                            </svg>
-                        </div>
-                        <span>Корзина</span></button>
+                                </svg>
+                            </div>
+                            <span>Корзина</span>
+                        </a>
+                    </button>
+
                     <div class="mob-menu-butt"></div>
                 </div>
             </div>
@@ -143,15 +150,40 @@
                     </div>
 
                 </div>
+
                 <div class="header-user_cabinet">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 15.804 15.804"  xml:space="preserve" width="13px" height="17px">
-                            <g>
-                                <path  d="M12.639,6.909V4.785C12.639,2.147,10.493,0,7.854,0S3.071,2.147,3.071,4.785v2.124H2.141v8.895   h11.521V6.909H12.639z M8.981,11.512v1.881c0,0.49-0.397,0.887-0.887,0.887c-0.491,0-0.888-0.396-0.888-0.887v-1.881   c-0.309-0.256-0.51-0.639-0.51-1.071c0-0.772,0.626-1.397,1.398-1.397S9.49,9.669,9.49,10.441   C9.491,10.874,9.29,11.256,8.981,11.512z M10.899,6.909H4.811V4.785c0-1.679,1.366-3.045,3.045-3.045   c1.678,0,3.044,1.366,3.044,3.045V6.909z"/>
-                            </g>
-                        </svg>
+                    <div class="option-wrapper" v-cloak>
+                        <a class="option" v-if="log=== true" href="#">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 350 350" style="enable-background:new 0 0 350 350;" xml:space="preserve" width="17" height="17">
+                                    <g>
+                                        <path d="M175,171.173c38.914,0,70.463-38.318,70.463-85.586C245.463,38.318,235.105,0,175,0s-70.465,38.318-70.465,85.587   C104.535,132.855,136.084,171.173,175,171.173z"/>
+                                        <path d="M41.909,301.853C41.897,298.971,41.885,301.041,41.909,301.853L41.909,301.853z"/>
+                                        <path d="M308.085,304.104C308.123,303.315,308.098,298.63,308.085,304.104L308.085,304.104z"/>
+                                        <path d="M307.935,298.397c-1.305-82.342-12.059-105.805-94.352-120.657c0,0-11.584,14.761-38.584,14.761   s-38.586-14.761-38.586-14.761c-81.395,14.69-92.803,37.805-94.303,117.982c-0.123,6.547-0.18,6.891-0.202,6.131   c0.005,1.424,0.011,4.058,0.011,8.651c0,0,19.592,39.496,133.08,39.496c113.486,0,133.08-39.496,133.08-39.496   c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <span>Nume Prenume</span>
+                        </a>
                     </div>
-                    <span v-on:click="modal.log = true" >Личный кабинет</span>
+                    <div class="option-wrapper" v-cloak>
+                        <div class="option" v-if="log=== false"  v-cloak>
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 15.804 15.804"  xml:space="preserve" width="13px" height="17px">
+                                <g>
+                                    <path  d="M12.639,6.909V4.785C12.639,2.147,10.493,0,7.854,0S3.071,2.147,3.071,4.785v2.124H2.141v8.895   h11.521V6.909H12.639z M8.981,11.512v1.881c0,0.49-0.397,0.887-0.887,0.887c-0.491,0-0.888-0.396-0.888-0.887v-1.881   c-0.309-0.256-0.51-0.639-0.51-1.071c0-0.772,0.626-1.397,1.398-1.397S9.49,9.669,9.49,10.441   C9.491,10.874,9.29,11.256,8.981,11.512z M10.899,6.909H4.811V4.785c0-1.679,1.366-3.045,3.045-3.045   c1.678,0,3.044,1.366,3.044,3.045V6.909z"/>
+                                </g>
+                            </svg>
+                            </div>
+                            <span v-on:click="modal.log = true" >Личный кабинет</span>
+                        </div>
+                    </div>
+
+
+
+
+
                     <modal v-if="modal.log" v-on:close="modal.log = false" v-cloak class="modal-base registration mobilemenu">
                         <section v-if="modal.auth === 1 || modal.auth === 2">
                             <div class="header-log_title">
@@ -325,11 +357,25 @@
                     </modal>
                 </div>
                 <div class="search-mob">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 451 451" style="enable-background:new 0 0 451 451;" xml:space="preserve" width="18px" height="18px">
+                    <div class="opened">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 451 451" style="enable-background:new 0 0 451 451;" xml:space="preserve" width="18px" height="18px">
                                     <g>
                                         <path d="M447.05,428l-109.6-109.6c29.4-33.8,47.2-77.9,47.2-126.1C384.65,86.2,298.35,0,192.35,0C86.25,0,0.05,86.3,0.05,192.3   s86.3,192.3,192.3,192.3c48.2,0,92.3-17.8,126.1-47.2L428.05,447c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4   C452.25,441.8,452.25,433.2,447.05,428z M26.95,192.3c0-91.2,74.2-165.3,165.3-165.3c91.2,0,165.3,74.2,165.3,165.3   s-74.1,165.4-165.3,165.4C101.15,357.7,26.95,283.5,26.95,192.3z"/>
                                     </g>
-                    </svg>
+                        </svg>
+                    </div>
+                    <div class="closed">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="17" height="17" viewBox="0 0 357 357" xml:space="preserve">
+                            <g>
+                                <g >
+                                    <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3     214.2,178.5   "/>
+                                </g>
+                            </g>
+                        </svg>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -628,6 +674,7 @@
 <!-- ========= scripts ========= -->
 <script>
     window.Laravel = <?php echo json_encode([
+        'auth' =>true,
         'csrfToken' => csrf_token(),
         'language' => '',
         'cartNumber'=>'1',

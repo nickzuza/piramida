@@ -16,6 +16,7 @@ function prodSlideInit(){
         '</g> </g> </g> ' +
         ' </div>',
         slidesToShow:5,
+        focusOnSelect: true,
         vertical:true,
     });
     $('.slider-max').slick({

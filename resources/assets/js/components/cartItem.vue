@@ -18,7 +18,7 @@
                                                                     <g><g><path d="M465.167,211.613H240.21H26.69c-8.424,0-26.69,11.439-26.69,34.316s18.267,34.316,26.69,34.316h213.52h224.959    c8.421,0,26.689-11.439,26.689-34.316S473.59,211.613,465.167,211.613z"/></g></g>
                                                                 </svg>
                             </button>
-                            <input type="number" min="1" v-model="item.num" value="item.num">
+                            <input type="number" min="1" v-model.number="val" value="item.num">
                             <button v-on:click="plus">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 491.86 491.86" width="12" height="12 ">
                                     <g><g><path d="M465.167,211.614H280.245V26.691c0-8.424-11.439-26.69-34.316-26.69s-34.316,18.267-34.316,26.69v184.924H26.69    C18.267,211.614,0,223.053,0,245.929s18.267,34.316,26.69,34.316h184.924v184.924c0,8.422,11.438,26.69,34.316,26.69    s34.316-18.268,34.316-26.69V280.245H465.17c8.422,0,26.69-11.438,26.69-34.316S473.59,211.614,465.167,211.614z"/></g></g>
@@ -40,7 +40,7 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <span>Удалить</span>
+                                <slot></slot>
                             </div>
                         </div>
                     </div>
@@ -49,10 +49,15 @@
     </transition>
 </template>
 <script>
+    function isANumber( n ) {
+        var numStr = /^-?(\d+\.?\d*)$|(\d*\.?\d+)$/;
+        return numStr.test( n.toString() );
+    }
     export default{
         data(){
             return{
-                item : this.product
+                item : this.product,
+                val:this.product.num
 
             }
         },
@@ -87,7 +92,21 @@
 
             this.$emit('get-total');
         },
-
+        watch:{
+            val(val,oldval){
+                if(isANumber(val)){
+                    if(val > 999 || val < 1){
+                        this.val = oldval;
+                    }
+                    if(val !== oldval && val > 0 && val < 999){
+                        console.log('this is num - '+val);
+                        //cartPage.getTotal();
+                    }
+                }else{
+                    this.val = oldval;
+                }
+            }
+        },
         computed:{
             totalSum(){
                 var sum = this.item.price.new * this.item.num;
