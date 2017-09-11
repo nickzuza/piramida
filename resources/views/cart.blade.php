@@ -485,7 +485,7 @@
                                     <div class="price">
                                         <span class="cart-label">Итого</span>
                                         <span class="totalPrice"><span class="round" v-text="getRound(total)"></span><sup class="rest" v-text="getRest(total)"></sup></span>
-                                        <span class="sufix" v-text="lei"></span>
+                                        <span class="sufix" ></span>
                                     </div>
                                     <transition name="fade">
                                         <div class="delivery-price" v-if="step===2">
