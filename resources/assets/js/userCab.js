@@ -107,6 +107,14 @@ if(document.getElementById('userCabPage')){
                 }
                 return total;
             },
+            changeSlug(tab){
+              if(tab != this.tab){
+                  this.tab=tab;
+                  setTimeout(function(){
+                      console.log($('.menu-list>li.active').attr('data-slug'));
+                  },10);
+              }
+            },
             getRound(price){
                 return Math.floor(parseInt(price))
             },
@@ -116,6 +124,7 @@ if(document.getElementById('userCabPage')){
         },
         mounted(){
             this.activeMen = $('.menu-list>.active').html()
+            setTimeout(this.changeSlug(this.tab),1000)
         }
     });
     $('.header-men').click(function(){

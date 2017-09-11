@@ -114,11 +114,11 @@
                     <div class="userCab-left">
                             <div class="header-men" v-text="activeMen"></div>
                             <ul class="menu-list" >
-                                <li  :class="{active : tab===1}" @click="tab=1">Личные данные</li>
-                                <li :class="{active : tab===2}" @click="tab=2">Избранные товары</li>
-                                <li :class="{active : tab===3}" @click="tab=3">История покупок</li>
-                                <li :class="{active : tab===4}" @click="tab=4">Изменить пароль</li>
-                                <li :class="{active : tab===5}" @click="tab=5">Выход</li>
+                                <li  :class="{active : tab===1} " data-slug="personalData" @click=" changeSlug(1)">Личные данные</li>
+                                <li :class="{active : tab===2}"   data-slug="Favorites" @click=" changeSlug(2)">Избранные товары</li>
+                                <li :class="{active : tab===3}"   data-slug="BuyHistory" @click=" changeSlug(3)">История покупок</li>
+                                <li :class="{active : tab===4}"   data-slug="ChangePassword" @click=" changeSlug(4)">Изменить пароль</li>
+                                <li :class="{active : tab===5}"  data-slug="LogOut" @click=" changeSlug(5)">Выход</li>
                             </ul>
                     </div>
                     <div class="userCab-right" v-cloak>
@@ -239,7 +239,6 @@
                                                        data-vv-validate-on="none"
                                                        v-on:focus="removeError('form_userData_house');"
                                                 >
-                                                <span class="error" v-if="errors.has('form_userData_house')">error</span>
                                             </div>
                                         </div>
                                         <div class="input-wrapper">
@@ -252,7 +251,6 @@
                                                        data-vv-validate-on="none"
                                                        v-on:focus="removeError('form_userData_door');"
                                                 >
-                                                <span class="error" v-if="errors.has('form_userData_door')">error</span>
                                             </div>
                                         </div>
                                         <div class="input-wrapper">
@@ -265,7 +263,6 @@
                                                        data-vv-validate-on="none"
                                                        v-on:focus="removeError('form_userData_level');"
                                                 >
-                                                <span class="error" v-if="errors.has('form_userData_level')">error</span>
                                             </div>
                                         </div>
                                         <div class="input-wrapper">
@@ -278,9 +275,16 @@
                                                        data-vv-validate-on="none"
                                                        v-on:focus="removeError('form_userData_room');"
                                                 >
-                                                <span class="error" v-if="errors.has('form_userData_room')">error</span>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="four-inputs-wrapper-error">
+
+                                        <span class="error" v-if="errors.has('form_userData_house')">error</span>
+                                        <span class="error" v-if="errors.has('form_userData_door')">error</span>
+                                        <span class="error" v-if="errors.has('form_userData_room')">error</span>
+                                        <span class="error" v-if="errors.has('form_userData_level')">error</span>
+
                                     </div>
                                     <button type="button" @click="validateForm" class="main-butt">Сохранить</button>
                                 </form>

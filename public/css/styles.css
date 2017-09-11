@@ -1390,6 +1390,20 @@ ul {
   flex-direction: row;
   margin-bottom: 30px;
 }
+.four-inputs-wrapper-error {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  padding-left: 210px;
+}
+.four-inputs-wrapper-error > .error {
+  color: red;
+  display: block;
+}
 @media (min-width: 2px) and (max-width: 749px) {
   .four-inputs-wrapper {
     width: calc(100% + 12px);
