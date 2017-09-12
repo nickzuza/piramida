@@ -675,8 +675,9 @@
 <script>
     window.Laravel = <?php echo json_encode([
         'auth' =>true,
+
         'csrfToken' => csrf_token(),
-        'language' => '',
+        'language' => 'ro',
         'cartNumber'=>'1',
         'cartData'=>'20434',
     ]); ?>

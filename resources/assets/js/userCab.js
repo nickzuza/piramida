@@ -145,6 +145,16 @@ if(document.getElementById('userCabPage')){
             $('.menu-list').removeClass('opened');
         }
     });
+    $(document).on('click','.deleteProd',function(e){
+        var el = e.currentTarget;
+        $(el).closest('.product').velocity({
+            opacity:0,
+        } , function(el){
+            $(el).closest('.product').remove();
+        });
+
+
+    });
     $('.menu-list>li').click(function(){
         userCab.activeMen = $('.menu-list>.active').html()
         if(window.innerWidth < 1170) {

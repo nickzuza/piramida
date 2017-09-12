@@ -4,13 +4,17 @@ import productItem from './components/cartItem';
 
 
 
-function wordend(num, words){
-    return words[ ((num=Math.abs(num%100)) > 10 && num < 15 || (num%=10) > 4 || num === 0) + (num !== 1) ];
-}
+
 if(document.getElementById('cartPage')){
     window.cartObj = new Vue({
         el:"#cartPage",
         data:{
+            info:window.Laravel,
+            sufix:{
+                ro:['leu','lei','lei'],
+                ru:['лей','лея','лей'],
+                en:['lei','lei','lei']
+            },
             products:window.cartArray,
             step:1,
             tab:1,
@@ -56,6 +60,9 @@ if(document.getElementById('cartPage')){
             }
         },
         methods:{
+            wordend(num, words){
+            return words[ ((num=Math.abs(num%100)) > 10 && num < 15 || (num%=10) > 4 || num === 0) + (num !== 1) ];
+            },
             submitForm(){
                 this.$validator.validateAll().then((result) => {
                     if(result){

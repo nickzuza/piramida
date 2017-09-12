@@ -31,7 +31,7 @@
                         <div class="price">
                             <span class="round" v-text="getRound(totalSum)"></span>
                             <sup class="rest" v-text="getRest(totalSum)"></sup>
-                            <span class="sufix">Лей</span>
+                            <span class="sufix" v-text="wordend(getRound(totalSum) , sufix[this.lang] )">Лей</span>
                             <div class="remove" v-on:click="destroy">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve" width="13px" height="13">
                                     <g>
@@ -60,6 +60,11 @@
     export default{
         data(){
             return{
+                sufix:{
+                    ro:['leu','lei','lei'],
+                    ru:['лей','лея','лей'],
+                    en:['lei','lei','lei']
+                },
                 item : this.product,
                 val:this.product.num
 
@@ -91,7 +96,7 @@
                 return (price - this.getRound(price))*100;
             }
         },
-        props:['product' , 'arrPos'],
+        props:['product' , 'arrPos' , 'wordend' , 'lang'],
         mounted(){
 
             this.$emit('get-total');

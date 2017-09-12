@@ -85,6 +85,8 @@
                                                 v-on:close="remove"
                                                 :arr-pos="index"
                                                 :product="item"
+                                                :wordend="wordend"
+                                                :lang="info.language"
                                                 v-on:get-total="totalSum"
                                         >
                                         </product-item>
@@ -485,7 +487,7 @@
                                     <div class="price">
                                         <span class="cart-label">Итого</span>
                                         <span class="totalPrice"><span class="round" v-text="getRound(total)"></span><sup class="rest" v-text="getRest(total)"></sup></span>
-                                        <span class="sufix" ></span>
+                                        <span class="sufix" v-text="wordend(getRound(total) , sufix[info.language])"></span>
                                     </div>
                                     <transition name="fade">
                                         <div class="delivery-price" v-if="step===2">

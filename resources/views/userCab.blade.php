@@ -110,6 +110,11 @@
     <div id="userCabPage" class="userCab">
         <div class="page-content">
             <div class="container">
+                <div class="breadcrumbs">
+                    <div class="breadcrumb back"><a href="">Главная</a></div>
+                    <div class="breadcrumb"><span>Личный кабинет</span></div>
+                </div>
+                <div class="h1-title"><h1>Личный кабинет</h1></div>
                 <div class="userCab-wrapper">
                     <div class="userCab-left">
                             <div class="header-men" v-text="activeMen"></div>
@@ -739,7 +744,7 @@
                                             <input type="password"
                                                    v-validate="'required'"
                                                    name="form_changePass_confNewPass"
-                                                   v-model.lazy="form.changePass.actNewPass"
+                                                   v-model.lazy="form.changePass.confNewPass"
                                                    data-vv-validate-on="none"
                                                    v-on:focus="removeError('form_changePass_confNewPass');"
                                             >
