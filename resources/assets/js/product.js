@@ -140,13 +140,7 @@ if(document.getElementById('productPage')){
                 en:['lei','lei','lei']
             },
             modal:{
-                oneClick:false,
                 delivery:false,
-                oneC:{
-                    isSent:false,
-                    name:'',
-                    phone:''
-                }
             },
             product:window.productItem
         },
@@ -167,16 +161,7 @@ if(document.getElementById('productPage')){
             removeError(name){
                 this.errors.remove(name);
             },
-            validate(){
-                this.$validator.validateAll().then(result => {
-                    if (result) {
-                        this.modal.oneC.isSent = true;
-                        return;
-                    }else{
-                        headerVue.$validator.validateAll()
-                    }
-                });
-            }
+
 
         },
         watch:{
