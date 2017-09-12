@@ -30,6 +30,223 @@
                 </div>
             </div>
         </transition>
+        <modal v-if="modal.log" v-on:close="modal.log = false" v-cloak class="modal-base registration mobilemenu">
+            <section v-if="modal.auth === 1 || modal.auth === 2">
+                <div class="header-log_title">
+                    <button v-on:click="modal.auth = 1"
+                            :class="{active:modal.auth === 1}"
+                    >Войти</button>
+                    <button v-on:click="modal.auth = 2"
+                            :class="{active:modal.auth === 2}"
+                    >Зарегистрироваться</button>
+                </div>
+            </section>
+            <section key="auth" v-if="modal.auth === 1">
+                <section class="header-log_enter">
+                    <div class="header-mob">enter</div>
+                    <div class="input-wrapper">
+                        <label>Ваш E-mail:</label>
+                        <input type="text"
+                               v-validate="'required|email'"
+                               v-model="user.enter.email"
+                               name="user_enter_email"
+                               data-vv-validate-on="none"
+                               v-on:focus="removeError('user_enter_email')"
+                               v-on:change="user.enter.error = false"
+                        >
+                        <span :class="{error: errors.has('user_enter_email')}"
+                              v-if="errors.has('user_enter_email')"
+                        >@lang('l.email_valid')</span>
+                        <span class="error" v-if="user.enter.error">@lang('l.user_not_exist')</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Пароль:</label>
+                        <input type="password"
+                               v-validate="'required|min:3|max:20'"
+                               v-model="user.enter.pas"
+                               name="user_enter_pas"
+                               data-vv-validate-on="none"
+                               v-on:focus="removeError('user_enter_pas')"
+                        >
+                        <span :class="{error: errors.has('user_enter_pas')}"
+                              v-if="errors.has('user_enter_pas')"
+                        >@lang('l.password_valid')</span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button v-on:click="validate">Войти</button>
+                        <span v-on:click="modal.auth = 3">Забыли пароль?</span>
+                    </div>
+                </section>
+
+            </section>
+            <section key="reg" v-if="modal.auth === 2">
+                <section class="header-log_reg">
+                    <div class="input-wrapper">
+                        <label>Ваш E-mail:</label>
+                        <input type="text"
+                               maxlength="255"
+                               v-validate="'required|email'"
+                               v-model="user.reg.email"
+                               name="user_reg_email"
+                               key="user-reg-email"
+                               data-vv-validate-on="none"
+                               v-on:focus="removeError('user_reg_email');user.req.error = false"
+                        >
+                        <span :class="{error: errors.has('user_reg_email')}"
+                              v-if="errors.has('user_reg_email')"
+                        >@lang('l.email_valid') 1111</span>
+                        <span class="error" v-if="user.req.error">@lang('l.email_exists')</span>
+
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Пароль:</label>
+                        <input type="password"
+                               v-validate="'required|min:6|max:20'"
+                               minlength="6"
+                               maxlength="20"
+                               required
+                               v-model="user.reg.pas"
+                               name="user_reg_pas"
+                               key="user-reg-pass"
+                               data-vv-validate-on="none"
+                               v-on:focus="removeError('user_reg_pas')"
+                        >
+                        <span :class="{error: errors.has('user_reg_pas')}"
+                              v-if="errors.has('user_reg_pas')"
+                        >@lang('l.password_valid')</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Подтверждение пароля:</label>
+                        <input type="password"
+                               v-validate="'required|confirmed:user_reg_pas'"
+                               required
+                               minlength="6"
+                               maxlength="20"
+                               v-model="user.reg.pasrepeat"
+                               name="reg_password_confirmation"
+
+                               data-vv-validate-on="none"
+                               v-on:focus="removeError('reg_password_confirmation')"
+                        >
+                        <span :class="{error: errors.has('reg_password_confirmation')}"
+                              v-if="errors.has('reg_password_confirmation')"
+                        >@lang('l.password_confirmation')</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Ваше Имя:</label>
+                        <input type="text"
+                               v-validate="'required|min:2|max:50'"
+                               required
+                               minlength="2"
+                               maxlength="50"
+                               v-model="user.reg.name"
+                               name="user_reg_name"
+
+                               data-vv-validate-on="none"
+                               v-on:focus="removeError('user_reg_name')"
+                        >
+                        <span :class="{error: errors.has('user_reg_name')}"
+                              v-if="errors.has('user_reg_name')"
+                        >@lang('l.name_valid')</span>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Ваш телефон:</label>
+                        <input type="text"
+                               v-validate="'min:6|max:12'"
+                               maxlength="12"
+                               minlength="6"
+                               v-model="user.reg.tel"
+                               name="user_reg_tel"
+
+                               data-vv-validate-on="none"
+                               v-on:focus="removeError('user_reg_tel')"
+                        >
+                        <span :class="{error: errors.has('user_reg_tel')}"
+                              v-if="errors.has('user_reg_tel')"
+                        >@lang('l.mobile_phone_valid')</span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button v-on:click="validate">Зарегистрироваться</button>
+                    </div>
+                </section>
+
+            </section>
+            <section key="fog" v-if="modal.auth === 3">
+
+                <h2 class="header-fog_title">Востановление пароля</h2>
+                <div class="editor header-fog_text">
+                    После заполнения формы мы отправим специальную ссылку на указан
+                </div>
+                <section>
+                    <div class="input-wrapper">
+                        <label>Введите Ваш E-mail:</label>
+                        <input type="text"
+                               v-validate="'required|email'"
+                               required
+                               maxlength="255"
+                               v-model="user.fog.email"
+                               name="user_fog_email"
+                               placeholder="@lang('l.email')"
+                               data-vv-validate-on="none"
+                               v-on:focus="removeError('user_fog_email')"
+                        >
+                        <span :class="{error: errors.has('user_fog_email')}"
+                              v-if="errors.has('user_fog_email')"
+                        >@lang('l.email_valid')</span>
+                        <span class="error" v-if="user.fog.error">@lang('l.email_not_exist')</span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button v-on:click="validate">@lang('l.send')</button>
+                    </div>
+                </section>
+            </section>
+            <section key="conf" v-if="modal.auth === 4">
+                <div class="input-wrapper">
+                    <label>Новый пароль:</label>
+                    <input type="password"
+                           v-validate="'required|min:6'"
+                           required
+                           maxlength="255"
+                           v-model="user.conf.new"
+                           name="user_conf_new"
+                           placeholder="@lang('l.email')"
+                           data-vv-validate-on="none"
+                           v-on:focus="removeError('user_conf_new')"
+                    >
+                    <span :class="{error: errors.has('user_conf_new')}"
+                          v-if="errors.has('user_conf_new')"
+                    >@lang('l.email_valid')</span>
+                    <span class="error" v-if="user.conf.error">error</span>
+                </div>
+                <div class="input-wrapper">
+                    <label>Новый пароль: ещё раз</label>
+                    <input type="password"
+                           v-validate="'required|confirmed:user_conf_new'"
+                           required
+                           maxlength="255"
+                           v-model="user.conf.confNew"
+                           name="user_conf_new"
+                           placeholder="@lang('l.email')"
+                           data-vv-validate-on="none"
+                           v-on:focus="removeError('user_conf_confNew')"
+                    >
+                    <span :class="{error: errors.has('user_conf_confNew')}"
+                          v-if="errors.has('user_conf_confNew')"
+                    >@lang('l.email_valid')</span>
+                    <span class="error" v-if="user.conf.error">error</span>
+                </div>
+                <div class="btn-wrapper">
+                    <button v-on:click="validate">@lang('l.send')</button>
+                </div>
+            </section>
+            <section key="text" v-if="modal.auth === 5">
+                <h2 class="header-fog_title">Good Job</h2>
+                <div class="editor header-fog_text">
+                    После заполнения формы мы отправим специальную ссылку на указан
+                </div>
+            </section>
+
+        </modal>
         <div class="header-wrapper">
             <div class="header-top">
                 <div class="header-language">
@@ -143,7 +360,7 @@
                             <li><a href="">Акций</a></li>
                         </ul>
                         <ul class="mob-userCab">
-                            <li v-if="!log">Вход</li>
+                            <li v-if="!log" v-on:click="mobModal">Вход</li>
                             <li v-if="!log">Регистрация</li>
                             <li v-if="log">Кабинет</li>
                         </ul>
@@ -180,181 +397,6 @@
                         </div>
                     </div>
 
-
-
-
-
-                    <modal v-if="modal.log" v-on:close="modal.log = false" v-cloak class="modal-base registration mobilemenu">
-                        <section v-if="modal.auth === 1 || modal.auth === 2">
-                            <div class="header-log_title">
-                                <button v-on:click="modal.auth = 1"
-                                        :class="{active:modal.auth === 1}"
-                                >Войти</button>
-                                <button v-on:click="modal.auth = 2"
-                                        :class="{active:modal.auth === 2}"
-                                >Зарегистрироваться</button>
-                            </div>
-                        </section>
-                        <section key="auth" v-if="modal.auth === 1">
-                            <section class="header-log_enter">
-                                <div class="input-wrapper">
-                                    <label>Ваш E-mail:</label>
-                                    <input type="text"
-                                           v-validate="'required|email'"
-                                           v-model="user.enter.email"
-                                           name="user_enter_email"
-                                           data-vv-validate-on="none"
-                                           v-on:focus="removeError('user_enter_email')"
-                                           v-on:change="user.enter.error = false"
-                                    >
-                                    <span :class="{error: errors.has('user_enter_email')}"
-                                          v-if="errors.has('user_enter_email')"
-                                    >@lang('l.email_valid')</span>
-                                    <span class="error" v-if="user.enter.error">@lang('l.user_not_exist')</span>
-                                </div>
-                                <div class="input-wrapper">
-                                    <label>Пароль:</label>
-                                    <input type="password"
-                                           v-validate="'required|min:3|max:20'"
-                                           v-model="user.enter.pas"
-                                           name="user_enter_pas"
-                                           data-vv-validate-on="none"
-                                           v-on:focus="removeError('user_enter_pas')"
-                                    >
-                                    <span :class="{error: errors.has('user_enter_pas')}"
-                                          v-if="errors.has('user_enter_pas')"
-                                    >@lang('l.password_valid')</span>
-                                </div>
-                                <div class="btn-wrapper">
-                                    <button v-on:click="validate">Войти</button>
-                                    <span v-on:click="modal.auth = 3">Забыли пароль?</span>
-                                </div>
-                            </section>
-
-                        </section>
-                        <section key="reg" v-if="modal.auth === 2">
-                            <section class="header-log_reg">
-                                <div class="input-wrapper">
-                                    <label>Ваш E-mail:</label>
-                                    <input type="text"
-                                           maxlength="255"
-                                           v-validate="'required|email'"
-                                           v-model="user.reg.email"
-                                           name="user_reg_email"
-                                           key="user-reg-email"
-                                           data-vv-validate-on="none"
-                                           v-on:focus="removeError('user_reg_email');user.req.error = false"
-                                    >
-                                    <span :class="{error: errors.has('user_reg_email')}"
-                                          v-if="errors.has('user_reg_email')"
-                                    >@lang('l.email_valid') 1111</span>
-                                    <span class="error" v-if="user.req.error">@lang('l.email_exists')</span>
-
-                                </div>
-                                <div class="input-wrapper">
-                                    <label>Пароль:</label>
-                                    <input type="password"
-                                           v-validate="'required|min:6|max:20'"
-                                           minlength="6"
-                                           maxlength="20"
-                                           required
-                                           v-model="user.reg.pas"
-                                           name="user_reg_pas"
-                                           key="user-reg-pass"
-                                           data-vv-validate-on="none"
-                                           v-on:focus="removeError('user_reg_pas')"
-                                    >
-                                    <span :class="{error: errors.has('user_reg_pas')}"
-                                          v-if="errors.has('user_reg_pas')"
-                                    >@lang('l.password_valid')</span>
-                                </div>
-                                <div class="input-wrapper">
-                                    <label>Подтверждение пароля:</label>
-                                    <input type="password"
-                                           v-validate="'required|confirmed:user_reg_pas'"
-                                           required
-                                           minlength="6"
-                                           maxlength="20"
-                                           v-model="user.reg.pasrepeat"
-                                           name="reg_password_confirmation"
-
-                                           data-vv-validate-on="none"
-                                           v-on:focus="removeError('reg_password_confirmation')"
-                                    >
-                                    <span :class="{error: errors.has('reg_password_confirmation')}"
-                                          v-if="errors.has('reg_password_confirmation')"
-                                    >@lang('l.password_confirmation')</span>
-                                </div>
-                                <div class="input-wrapper">
-                                    <label>Ваше Имя:</label>
-                                    <input type="text"
-                                           v-validate="'required|min:2|max:50'"
-                                           required
-                                           minlength="2"
-                                           maxlength="50"
-                                           v-model="user.reg.name"
-                                           name="user_reg_name"
-
-                                           data-vv-validate-on="none"
-                                           v-on:focus="removeError('user_reg_name')"
-                                    >
-                                    <span :class="{error: errors.has('user_reg_name')}"
-                                          v-if="errors.has('user_reg_name')"
-                                    >@lang('l.name_valid')</span>
-                                </div>
-                                <div class="input-wrapper">
-                                    <label>Ваш телефон:</label>
-                                    <input type="text"
-                                           v-validate="'min:6|max:12'"
-                                           maxlength="12"
-                                           minlength="6"
-                                           v-model="user.reg.tel"
-                                           name="user_reg_tel"
-
-                                           data-vv-validate-on="none"
-                                           v-on:focus="removeError('user_reg_tel')"
-                                    >
-                                    <span :class="{error: errors.has('user_reg_tel')}"
-                                          v-if="errors.has('user_reg_tel')"
-                                    >@lang('l.mobile_phone_valid')</span>
-                                </div>
-                                <div class="btn-wrapper">
-                                    <button v-on:click="validate">Зарегистрироваться</button>
-                                </div>
-                            </section>
-
-                        </section>
-                        <section key="fog" v-if="modal.auth === 3">
-
-                            <h2 class="header-fog_title">Востановление пароля</h2>
-                            <div class="editor header-fog_text">
-                                После заполнения формы мы отправим специальную ссылку на указан
-                            </div>
-                            <section>
-                                <div class="input-wrapper">
-                                    <label>Введите Ваш E-mail:</label>
-                                    <input type="text"
-                                           v-validate="'required|email'"
-                                           required
-                                           maxlength="255"
-                                           v-model="user.fog.email"
-                                           name="user_fog_email"
-                                           placeholder="@lang('l.email')"
-                                           data-vv-validate-on="none"
-                                           v-on:focus="removeError('user_fog_email')"
-                                    >
-                                    <span :class="{error: errors.has('user_fog_email')}"
-                                          v-if="errors.has('user_fog_email')"
-                                    >@lang('l.email_valid')</span>
-                                    <span class="error" v-if="user.fog.error">@lang('l.email_not_exist')</span>
-                                </div>
-                                <div class="btn-wrapper">
-                                    <button v-on:click="validate">@lang('l.send')</button>
-                                </div>
-                            </section>
-                        </section>
-
-                    </modal>
                 </div>
                 <div class="search-mob">
                     <div class="opened">
@@ -674,7 +716,7 @@
 <!-- ========= scripts ========= -->
 <script>
     window.Laravel = <?php echo json_encode([
-        'auth' =>true,
+        'auth' =>false,
 
         'csrfToken' => csrf_token(),
         'language' => 'ro',

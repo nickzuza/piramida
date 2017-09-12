@@ -88,7 +88,6 @@ function initProductSlider(id){
     });
 }
 $(document).on('click','.productPage-top_info>.more-info' , function(){
-    console.log(1);
         $('html , body').animate({scrollTop:$('.productPage-bottom').offset().top} , 500);
         if ($('.caracteristics').attr('data-h')){
             $('.caracteristics').velocity({height : $('.caracteristics').attr('data-h') +'px'});
@@ -134,6 +133,12 @@ if(document.getElementById('productPage')){
      window.productPage=new Vue({
         el:"#productPage",
         data:{
+            lang:window.Laravel.language,
+            sufix:{
+                ro:['leu','lei','lei'],
+                ru:['лей','лея','лей'],
+                en:['lei','lei','lei']
+            },
             modal:{
                 oneClick:false,
                 delivery:false,
@@ -146,6 +151,9 @@ if(document.getElementById('productPage')){
             product:window.productItem
         },
         methods:{
+            wordend(num, words){
+                return words[ ((num=Math.abs(num%100)) > 10 && num < 15 || (num%=10) > 4 || num === 0) + (num !== 1) ];
+            },
             addFav(){
                 if (parseInt(this.product.onFav) === 0){
                     this.product.onFav = 1;

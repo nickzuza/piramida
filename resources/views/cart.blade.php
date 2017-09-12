@@ -62,15 +62,15 @@
 
         <div class="page-content">
             <div class="container">
-                <div class="breadcrumbs" :class="{hide: step >1}">
-                    <div class="breadcrumb"><a href="">Главная</a></div>
+                <div class="breadcrumbs" :class="{visible : step>1}">
+                    <div class="breadcrumb back"><a href="">Главная</a></div>
                     <div class="breadcrumb"><span>Корзина</span></div>
                 </div>
 
                     <div class="cart-wrapper" v-if="step <3">
                         <div class="cart-left" >
                             <transition name="fade">
-                                <section class="left-container" v-cloak v-if="step === 1">
+                                <section class="left-container top-padd" v-cloak v-if="step === 1">
                                     <div class="h1-title"><h1>Корзина</h1></div>
                                     <div class="titles" v-if="total > 0">
                                         <span class="prod">Товар</span>
@@ -94,7 +94,7 @@
                                 </section>
                             </transition>
                             <transition name="fade">
-                                <section class="left-container"  v-cloak v-if="step === 2">
+                                <section class="left-container top-padd"  v-cloak v-if="step === 2">
                                     <div class="h1-title"><h1>оформление заказа</h1></div>
                                     <form action="" method="POST" >
                                         <div class="form-top">

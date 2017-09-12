@@ -208,7 +208,7 @@ ul {
 }
 .page-content{
   min-height: 500px;
- // padding: 40px 0;
+  padding: 0 0 40px;
   .screen(2px , @s750 , {
     padding:  0 0 40px;
   });
@@ -708,6 +708,7 @@ ul {
   .screen(2px , @s750, {
     &.visible{
       display: flex;
+
     }
 
     background: #fff;
@@ -722,6 +723,10 @@ ul {
   .breadcrumb{
     .screen(2px , @s750 , {
       display: none;
+      margin-left: 0;
+      &:before{
+        display: none;
+      }
       &.back{
         a{
           font-size: 16px;
@@ -944,6 +949,10 @@ ul {
     }
   }
 }
+.top-padd{
+  .screen(2px ,@s660  ,{padding-top: 45px;});
+}
+
 
 .header{
   width: 100%;
@@ -2018,6 +2027,18 @@ ul {
       }
     }
     .header{
+      &-mob{
+        .screen(@s1300 , 9999px , {display: none});
+        display: block;
+        width: ~'calc(100% + 30px)';
+        margin: -15px -15px 0;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        color:#000;
+        padding:16px;
+        border-bottom: 1px solid #f2f3f5;
+      }
       &-log{
         &_title{
           margin-bottom: 48px;
@@ -2032,6 +2053,7 @@ ul {
             background-color:transparent;
             border-color:transparent;
           }
+          .screen(2px,  @s1300 , {display:none});
         }
         &_reg{
           .btn-wrapper{
@@ -2757,7 +2779,11 @@ ul {
 }
 .productPage{
   background: #f2f3f5;
-
+  .h1-title{
+    .screen(2px , @s1300 , {
+      padding-top: 45px;
+    });
+  }
   &-top , &-bottom{
     width: 100%;
     background: #fff;
@@ -3626,7 +3652,7 @@ ul {
     .screen(2px , @s1300 , {width:100%});
     transition: 0.3s;
     &.top{
-      padding-top : 98px;
+      padding: 98px 0;
     }
     padding-top: 56px;
     width:~'calc(25% - 20px)';

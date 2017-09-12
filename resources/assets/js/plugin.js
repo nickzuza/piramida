@@ -63,23 +63,40 @@ if(document.getElementById('header')){
                 },
                 fog:{
                     email:''
+                },
+                conf:{
+                    new:'',
+                    confNew:''
                 }
             }
         },
         methods:{
+            mobModal(){
+
+                $(".main-menu").velocity({top:'-100vh'});
+                {
+                    this.modal.log = true;
+                }
+
+            },
             validate(){
                 this.$validator.validateAll().then(result => {
                         if (result) {
                             if(this.modal.log){
                                 switch (this.modal.auth){
                                     case 1:
-                                        Login();
+                                        console.log(1);
                                         break;
                                     case 2:
-                                        Register();
+                                        console.log(2);
                                         break;
                                     case 3:
-                                        ResetFromEmail();
+                                        console.log(3);
+                                        this.modal.auth=4;
+                                        break;
+                                    case 4:
+                                        console.log(4);
+                                        this.modal.auth=5;
                                         break;
                                 }
                             }
@@ -233,6 +250,11 @@ if(document.getElementById('header')){
         if(window.innerWidth > 1270){
             $('.categories-list').removeAttr('style');
         }
+    });
+    $(document).on('click' , '.modal-close' , function(){
+        if(window.innerWidth<1270 ){
+            $('body , html').removeClass('scr-no')
+        };
     });
     $('.column-title').click(function(e){
         var el=e.currentTarget;

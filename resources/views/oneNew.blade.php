@@ -6,13 +6,13 @@
     <div id="oneNew" class="oneNew defaultPage">
         <div class="page-content">
             <div class="container">
-                <div class="breadcrumbs">
+                <div class="breadcrumbs visible">
                     <div class="breadcrumb"><a href="">Главная</a></div>
-                    <div class="breadcrumb"><a href="">Строительные материалы</a></div>
+                    <div class="breadcrumb back"><a href="">Строительные материалы</a></div>
                     <div class="breadcrumb"><a href="">Смеси кладочно-монтажные</a></div>
                     <div class="breadcrumb"><span>Грунт Ceresit CT17 5 л</span></div>
                 </div>
-                <div class="h1-title"><h1>Грунт Ceresit CT17 5 л</h1></div>
+                <div class="h1-title top-padd"><h1>Грунт Ceresit CT17 5 л</h1></div>
                 <div class="date">12 aпреля</div>
                 <div class="editor">
                     <img src="https://img00.deviantart.net/575a/i/2017/169/b/0/cyberpunk_city_by_artursadlos-dbb7hcs.jpg" alt="img">
