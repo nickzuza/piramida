@@ -494,7 +494,7 @@
                                             <span class="title-label">Доставка:</span>
                                             <span v-if="tab == 2">Бесплатно</span>
                                             <span v-else="tab ===1" >
-                                            <span v-if="form.courier.city.summ" v-text="form.courier.city.summ"></span>
+                                            <span v-if="form.courier.city.summ" v-text="form.courier.city.summ > total ? form.courier.city.cost : 'Бесплатно'" ></span>
                                             <span v-if="!form.courier.city.summ">Выберите город</span></span>
                                         </div>
                                     </transition>
