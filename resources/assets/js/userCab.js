@@ -31,6 +31,8 @@ if(document.getElementById('userCabPage')){
                     actPass:'',
                     newPass:'',
                     confNewPass:'',
+                    isCorrect:false
+
                 },
                 userData:{
                     email:'',
@@ -124,8 +126,11 @@ if(document.getElementById('userCabPage')){
         },
         mounted(){
             this.activeMen = $('.menu-list>.active').html()
-            setTimeout(this.changeSlug(this.tab),1000)
+            setTimeout(this.changeSlug(this.tab),1000);
         }
+    });
+    $(document).on('focus' , 'input[name="form_changePass_actPass"]',function(){
+        userCab.form.changePass.isCorrect = false;
     });
     $('.header-men').click(function(){
         if($('.menu-list').hasClass('opened')){

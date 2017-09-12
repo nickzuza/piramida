@@ -44,7 +44,13 @@ if(document.getElementById('header')){
             log:Laravel.auth,
             modal:{
                 auth:1,
-                log:false
+                log:false,
+                oneClick:false,
+                oneC:{
+                    isSent:'',
+                    name:'',
+                    phone:''
+                }
             },
             user:{
                 enter:{
@@ -71,14 +77,20 @@ if(document.getElementById('header')){
             }
         },
         methods:{
-            mobModal(){
-
+            mobModal(mod){
                 $(".main-menu").velocity({top:'-100vh'});
-                {
+                if(mod===1){
+                    {
+                        this.modal.log = true;
+                    }
+                }else{
+                    this.modal.auth=2;
                     this.modal.log = true;
                 }
 
+
             },
+
             validate(){
                 this.$validator.validateAll().then(result => {
                         if (result) {
@@ -104,6 +116,16 @@ if(document.getElementById('header')){
                         }else{
                             headerVue.$validator.validateAll()
                         }
+                });
+            },
+            validateOneC(){
+                this.$validator.validateAll().then(result => {
+                    if (result) {
+                        this.modal.oneC.isSent = true;
+                        return;
+                    }else{
+                        headerVue.$validator.validateAll()
+                    }
                 });
             },
             removeError(name){
@@ -258,16 +280,20 @@ if(document.getElementById('header')){
     });
     $('.column-title').click(function(e){
         var el=e.currentTarget;
-
-        if($(el).closest('.column').hasClass('opened')){
-            $(el).closest('.column').removeClass('opened');
-            $(el).closest('.column').find('ul').slideUp();
-        }else{
-            $('.column.opened').find('ul').slideUp();
-            $('.column.opened').removeClass('opened')
-            $(el).closest('.column').addClass('opened');
-            $(el).closest('.column').find('ul').slideDown();
+        if(window.innerWidth < 750){
+            if($(el).closest('.column').hasClass('opened')){
+                $(el).closest('.column').removeClass('opened');
+                $(el).closest('.column').find('ul').slideUp();
+            }else{
+                $('.column.opened').find('ul').slideUp();
+                $('.column.opened').removeClass('opened')
+                $(el).closest('.column').addClass('opened');
+                $(el).closest('.column').find('ul').slideDown();
+            }
         }
+
+
+
     });
 }
 

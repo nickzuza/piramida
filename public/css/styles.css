@@ -1031,7 +1031,7 @@ ul {
 .top-slider {
   width: 100%;
   height: 420px;
-  margin: 0 0 50px;
+  margin: 40px 0 50px;
   background: #eee;
   position: relative;
 }
@@ -2609,6 +2609,10 @@ ul {
   }
 }
 .header-user-prods button {
+  border: none;
+  background-color: transparent ;
+}
+.header-user-prods button a {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2626,12 +2630,7 @@ ul {
   -webkit-box-align: center;
   align-items: center;
 }
-.header-user-prods button a {
-  display: -webkit-box;
-  display: flex;
-  width: 100%;
-}
-.header-user-prods button:nth-of-type(n+2) .icon svg {
+.header-user-prods button:nth-of-type(n+2) a .icon svg {
   fill: #04226d;
 }
 @media (min-width: 2px) and (max-width: 1269px) {
@@ -3463,6 +3462,15 @@ ul {
   left: 0;
   background: #091f56;
 }
+@media (min-width: 2px) and (max-width: 1269px) {
+  .modal-body section {
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+    max-height: 100vh;
+    overflow: auto;
+    padding: 0 15px;
+  }
+}
 .modal-body .input-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -3963,7 +3971,7 @@ ul {
 .filialPage .home-slider {
   width: 100%;
   height: 420px;
-  margin: 0 0 50px;
+  margin: 40px 0 50px;
   background: #eee;
   position: relative;
   margin-bottom: 110px;
@@ -4486,7 +4494,7 @@ ul {
 .homePage .home-slider {
   width: 100%;
   height: 420px;
-  margin: 0 0 50px;
+  margin: 40px 0 50px;
   background: #eee;
   position: relative;
 }
@@ -4833,7 +4841,7 @@ ul {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 111;
+  z-index: 1;
   width: 60px;
   height: 20px;
   border-radius: 5px;

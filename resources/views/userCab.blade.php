@@ -720,6 +720,7 @@
                                                    data-vv-validate-on="none"
                                                    v-on:focus="removeError('form_changePass_actPass');"
                                             >
+                                            <span class="error" v-if="form.changePass.isCorrect">error</span>
                                             <span class="error" v-if="errors.has('form_changePass_actPass')">error</span>
                                         </div>
 

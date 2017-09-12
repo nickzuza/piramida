@@ -81,6 +81,7 @@
             </section>
             <section key="reg" v-if="modal.auth === 2">
                 <section class="header-log_reg">
+                    <div class="header-mob">registration</div>
                     <div class="input-wrapper">
                         <label>Ваш E-mail:</label>
                         <input type="text"
@@ -225,7 +226,7 @@
                            required
                            maxlength="255"
                            v-model="user.conf.confNew"
-                           name="user_conf_new"
+                           name="user_conf_confNew"
                            placeholder="@lang('l.email')"
                            data-vv-validate-on="none"
                            v-on:focus="removeError('user_conf_confNew')"
@@ -245,6 +246,51 @@
                     После заполнения формы мы отправим специальную ссылку на указан
                 </div>
             </section>
+
+        </modal>
+        <modal v-if="modal.oneClick" v-on:close="modal.oneClick = false" v-cloak class="modal-base registration mobilemenu">
+            <h2 class="header-fog_title">Быстрый заказ</h2>
+            <div v-if="!modal.oneC.isSent">
+                <div class="editor header-fog_text">Заполните форму, и наши менеджеры свяжутся с вами в течение часa</div>
+                <div class="input-wrapper">
+                    <label>Укажите ваше имя:</label>
+                    <input type="text"
+                           v-validate="'required|min:2|max:30'"
+                           v-model="modal.oneC.name"
+                           name="modal_oneC_name"
+                           data-vv-validate-on="none"
+                           v-on:focus="removeError('modal_oneC_name')"
+                           v-on:change="modal.oneC.error = false"
+                    >
+                    <span :class="{error: errors.has('modal_oneC_name')}"
+                          v-if="errors.has('modal_oneC_name')"
+                    >@lang('l.email_valid')</span>
+                    <span class="error" v-if="modal.oneC.error">@lang('l.user_not_exist')</span>
+                </div>
+                <div class="input-wrapper">
+                    <label>Укажите ваш телефон:</label>
+                    <input type="text"
+                           v-validate="'required|min:6|max:12'"
+                           v-model="modal.oneC.phone"
+                           name="modal_oneC_phone"
+                           data-vv-validate-on="none"
+                           v-on:focus="removeError('modal_oneC_phone')"
+                           v-on:change="modal.oneC.error = false"
+                    >
+                    <span :class="{error: errors.has('modal_oneC_phone')}"
+                          v-if="errors.has('modal_oneC_phone')"
+                    >@lang('l.email_valid')</span>
+                    <span class="error" v-if="modal.oneC.error">@lang('l.user_not_exist')</span>
+                </div>
+                <div class="btn-wrapper">
+                    <button v-on:click="validateOneC">Отправить</button>
+                </div>
+            </div>
+            <div v-if="modal.oneC.isSent">
+                <div class="editor header-fog_text">
+                    Ждите звонка
+                </div>
+            </div>
 
         </modal>
         <div class="header-wrapper">
@@ -360,8 +406,8 @@
                             <li><a href="">Акций</a></li>
                         </ul>
                         <ul class="mob-userCab">
-                            <li v-if="!log" v-on:click="mobModal">Вход</li>
-                            <li v-if="!log">Регистрация</li>
+                            <li v-if="!log" v-on:click="mobModal(1)">Вход</li>
+                            <li v-if="!log" v-on:click="mobModal(2)">Регистрация</li>
                             <li v-if="log">Кабинет</li>
                         </ul>
                     </div>
