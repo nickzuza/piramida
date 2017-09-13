@@ -43,6 +43,9 @@ Route::get('/aboutUs',['as' => '/', 'uses' => function (){
 Route::get('/search',['as' => '/', 'uses' => function (){
     return view('search');
 }]);
+Route::get('/catalog',['as' => '/', 'uses' => function (){
+    return view('catalog');
+}]);
 
 Route::get('/catalog',['as' => 'catalog', 'uses' => function (){
     return view('catalog');
