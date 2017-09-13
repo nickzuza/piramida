@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        *[v-cloak]{
+            display: none;
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,700|Exo:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     {{--<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">--}}
