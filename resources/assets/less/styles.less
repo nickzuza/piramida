@@ -1386,7 +1386,12 @@ ul {
         padding:0 20px ;
         background-color: #fff;
         align-items: center;
-
+        .screen(2px, @s1300 , {
+          border:none;
+          padding: none;
+          width: auto;
+          align-items: center;
+        });
       }
 
       &:nth-of-type(n+2){
@@ -1399,12 +1404,7 @@ ul {
         }
 
       }
-      .screen(2px, @s1300 , {
-        border:none;
-        padding: none;
-        width: auto;
-        align-items: center;
-      });
+
       .icon{
         display: flex;
         flex-direction: column;
@@ -4786,6 +4786,7 @@ ul {
           }
           textarea{
             height: 130px;
+            padding: 15px;
           }
         }
       }

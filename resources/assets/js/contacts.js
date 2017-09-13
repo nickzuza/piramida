@@ -22,21 +22,8 @@ if(document.getElementById('contacts')){
             validate(){
                 this.$validator.validateAll().then((result) => {
                     if(result){
-                        // var data= {};
-                        // data['tab']    = this.tab;
-                        // data['pay']    = this.paytab;
-                        // data['info']    = this.info;
-                        // data['_token']    = Laravel.csrfToken;
-                        // $.ajax({
-                        //     url: '',
-                        //     // url: Laravel.language+'/cart',
-                        //     type: 'POST',
-                        //     data: data,
-                        //     dataType: 'JSON',
-                        //     success: function (data){
-                        //         this.step = 3;
-                        //     }
-                        // });
+                        headerVue.modal.auth=6;
+                        headerVue.modal.log=true;
                     }
                 }).catch(() => {
 

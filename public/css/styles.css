@@ -2630,17 +2630,17 @@ ul {
   -webkit-box-align: center;
   align-items: center;
 }
-.header-user-prods button:nth-of-type(n+2) a .icon svg {
-  fill: #04226d;
-}
 @media (min-width: 2px) and (max-width: 1269px) {
-  .header-user-prods button {
+  .header-user-prods button a {
     border: none;
     padding: none;
     width: auto;
     -webkit-box-align: center;
     align-items: center;
   }
+}
+.header-user-prods button:nth-of-type(n+2) a .icon svg {
+  fill: #04226d;
 }
 .header-user-prods button .icon {
   display: -webkit-box;
@@ -7390,6 +7390,7 @@ ul {
 }
 .contactsPage .feedback .block .input-wrapper .v-input textarea {
   height: 130px;
+  padding: 15px;
 }
 .newsPage {
   background: #f2f3f5;

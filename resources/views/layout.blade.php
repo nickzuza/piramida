@@ -246,6 +246,12 @@
                     После заполнения формы мы отправим специальную ссылку на указан
                 </div>
             </section>
+            <section key="text" v-if="modal.auth === 6">
+                <h2 class="header-fog_title">Got FeedBack</h2>
+                <div class="editor header-fog_text">
+                    После заполнения формы мы отправим специальную ссылку на указан
+                </div>
+            </section>
 
         </modal>
         <modal v-if="modal.oneClick" v-on:close="modal.oneClick = false" v-cloak class="modal-base registration mobilemenu">
