@@ -46,3 +46,4 @@ require('./firstCat');
 require('./userCab');
 require('./contacts');
 require('./catalog');
+require('./favorits');
