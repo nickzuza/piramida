@@ -577,6 +577,24 @@ ul {
   position: relative;
   margin-left: -1px;
   padding: 20px;
+  .deleteProd{
+    position: absolute;
+    top:0;
+    right:0;
+    width:32px;
+    height: 32px;
+    background: #e3e4e6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &:hover>svg{
+      fill:@blue-light;
+    }
+    svg{
+      fill:#737373;
+    }
+  }
   .img{
     .stickers{
       position: absolute;
